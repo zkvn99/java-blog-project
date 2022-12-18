@@ -13,6 +13,6 @@ public class Blog { //model 객체 : dto, vo 객체
     private long id;
     private String title;
     private String content;
-    private String author;
+    private String name;
     private String email;
 }

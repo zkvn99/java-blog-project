@@ -11,6 +11,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../blogs/list.do">블로그목록</a></li>
                 <%-- JSTL은 EL이나 HTML 태그 사용이 편리하다 --%>
             <c:choose>
                 <c:when test="${sessionScope.logined == null}">
@@ -24,8 +25,6 @@
                 <!-- 로그인 후 : session -->
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../blogs/post-form.do">블로그작성</a></li>
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../members/detail.do?email=${sessionScope.logined}">Detail</a></li>
-                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../members/update-form.do">Update</a></li>
-                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../members/delete.do">삭제</a></li>
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../members/logout.do">Sign out</a></li>
                 </c:otherwise>
             </c:choose>

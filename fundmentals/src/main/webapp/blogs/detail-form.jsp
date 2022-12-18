@@ -25,8 +25,8 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="page-heading">
-                            <h1>Member Detail</h1>
-                            <span class="subheading"></span>
+                            <h1>Blog Detail</h1>
+                            <span class="subheading">Have questions? I have answers.</span>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p></p>
+                        <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
                         <div class="my-5">
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -47,26 +47,26 @@
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
                             <!-- create, update, delete form, action -->
-                            <form action="update.do" method="post" id="contactForm">
+                            <form action="update.do?id=${blog.id}" method="post" id="contactForm">
                                 <div class="form-floating">
-                                    <input class="form-control" name="email" value="${member.email}" readonly id="email" type="email" placeholder="Enter your email..." data-sb-validations="required,email" />
+                                    <input class="form-control" name="name" value="${blog.name}" id="name" type="text" placeholder="Enter your name..." data-sb-validations="" />
+                                    <label for="name">Name</label>
+                                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" name="email" value="${blog.email}" readonly id="email" type="email" placeholder="Enter your email..." data-sb-validations="required,email" />
                                     <label for="email">Email</label>
                                     <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                     <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                                 </div>
                                 <div class="form-floating">
-                                    <input class="form-control" name="name" value="${member.name}" id="name" type="text" placeholder="Enter your name..." data-sb-validations="" />
-                                    <label for="name">Name</label>
-                                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                    <input class="form-control" name="title" value="${blog.title}" id="phone" type="tel" placeholder="Enter your phone number..." data-sb-validations="" />
+                                    <label for="phone">Title</label>
+                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A title is required.</div>
                                 </div>
                                 <div class="form-floating">
-                                    <input class="form-control" name="phone" value="${member.phone}" id="phone" type="tel" placeholder="Enter your phone number..." data-sb-validations="" />
-                                    <label for="phone">Phone Number</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required"></div>
-                                </div>
-                                <div class="form-floating">
-                                    <input class="form-control" name="address" value="${member.address}" id="address" type="text" placeholder="Enter your address.." data-sb-validations="" />
-                                    <label for="address">Address</label>
+                                    <textarea class="form-control" name="content" id="message" placeholder="Enter your massage here.." data-sb-validations="">${blog.content}</textarea>
+                                    <label for="message">Content</label>
                                     <div class="invalid-feedback" data-sb-feedback="phone:required"></div>
                                 </div>
                                 <!--
@@ -96,7 +96,7 @@
                                 <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                                 <!-- Submit Button-->
                                 <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Update</button>
-                                <a href="member-delete-form.jsp"><button class="btn btn-primary text-uppercase" id="submitButton" type="button">Delete</button></a>
+                                <a href="delete.do?id=${blog.id}"><button class="btn btn-primary text-uppercase" id="submitButton" type="button">Delete</button></a>
                             </form>
                         </div>
                     </div>

@@ -1,8 +1,7 @@
-<%--
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -21,34 +20,41 @@
     <body>
         <!-- Navigation-->
         <%@ include file="../main/nav.jsp"%>
-        <!-- Page Header-->
-        <header class="masthead" style="background-image: url('../assets/img/about-bg.jpg')">
+        <header class="masthead" style="background-image: url('../assets/img/home-bg.jpg')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="page-heading">
-                            <h1>Success</h1>
-                            <span class="subheading">${requestScope.message} success </span>
-                            <%-- EL 스코프 객체에서 속성을 찾을 때
-                      pageScope -> requestScope -> SessionScope -> ApplicationScope 순서로
-                            --%>
+                        <div class="site-heading">
+                            <h1><!--<%= request.getParameter("name") %>-->minwook Blog</h1>
+                            <span class="subheading">${message} 환영합니다.</span>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
         <!-- Main Content-->
-        <main class="mb-4">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <c:forEach items="${requestScope.blogs}" var="blog">
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="../blogs/list.do?id=${blog.id}">
+                            <h2 class="post-title">${blog.title}</h2>
+                            <h3 class="post-subtitle">${blog.content}</h3>
+                        </a>
+                        <p class="post-meta">
+                            Posted by ${blog.name} email ${blog.email}
+                        </p>
                     </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    </c:forEach>
+                    <!-- Pager-->
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
                 </div>
             </div>
-        </main>
+        </div>
         <!-- Footer-->
         <%@ include file="../main/footer.jsp"%>
         <!-- Bootstrap core JS-->

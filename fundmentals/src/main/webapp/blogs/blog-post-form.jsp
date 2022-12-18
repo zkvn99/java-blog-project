@@ -49,17 +49,7 @@
                             <!-- create, update, delete form, action -->
                             <form id="contactForm" action="post.do" method="post">
                                 <div class="form-floating">
-                                    <input class="form-control" name="title" id="phone" type="tel" placeholder="Enter your phone number..." data-sb-validations="required" />
-                                    <label for="phone">Title</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                                </div>
-                                <div class="form-floating">
-                                    <textarea class="form-control" name="content" id="message" placeholder="Enter your message here..." style="height: 12rem" data-sb-validations="required"></textarea>
-                                    <label for="message">Content</label>
-                                    <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                                </div>
-                                <div class="form-floating">
-                                    <input class="form-control" name="author" id="name" value="${requestScope.loginedName}"  type="text" placeholder="Enter your name..." data-sb-validations="required" readonly />
+                                    <input class="form-control" name="name" id="name" value="${requestScope.loginedName}"  type="text" placeholder="Enter your name..." data-sb-validations="required" readonly />
                                     <label for="name">Name</label>
                                     <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                                 </div>
@@ -68,6 +58,16 @@
                                     <label for="email">Email address</label>
                                     <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                     <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" name="title" id="phone" type="tel" placeholder="Enter your phone number..." data-sb-validations="required" />
+                                    <label for="phone">Title</label>
+                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" name="content" id="message" placeholder="Enter your message here..." style="height: 12rem" data-sb-validations="required"></textarea>
+                                    <label for="message">Content</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                                 </div>
                                 <br />
                                 <div class="d-none" id="submitSuccessMessage">
