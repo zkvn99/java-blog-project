@@ -6,4 +6,4 @@ create table member (
                         phone   varchar2(50),
                         address varchar2(100)
 );
-insert into member values(?, 'sw201912012@naver.com', 1234, 'minwook', '010504','451');
+insert into member values(1, 'sw201912012@naver.com', 1234, 'minwook', '010504','451');

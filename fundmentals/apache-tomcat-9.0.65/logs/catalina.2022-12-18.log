@@ -1,5 +1,0 @@
-18-Dec-2022 02:13:15.022 경고 [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 []을(를) 받았습니다.
-18-Dec-2022 02:18:24.989 경고 [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 []을(를) 받았습니다.
-18-Dec-2022 02:36:20.223 경고 [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 []을(를) 받았습니다.
-18-Dec-2022 02:48:17.277 경고 [main] org.apache.catalina.core.StandardServer.await 유효하지 않은 셧다운 명령 []을(를) 받았습니다.
-18-Dec-2022 13:33:32.257 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy 컨텍스트 [/ttt]의 배치를 제거합니다.

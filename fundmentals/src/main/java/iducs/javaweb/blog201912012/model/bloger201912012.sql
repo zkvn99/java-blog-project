@@ -9,10 +9,11 @@ create table blogger201912012
     phone   varchar2(50),
     address varchar2(100)
 );
+
+insert into blogger201912012 values(seq_blogger201912012.nextval, '201912012@office.induk.ac.kr', 'cometrue', '이민욱', '01011111111', '주소');
+
+select * from blogger201912012;
+
 drop sequence seq_blogger201912012;
 
 drop table blogger201912012;
-
-insert into blogger201912012 values(seq_blogger201912012.nextval, '200412345@office.induk.ac.kr', 'cometrue', '유응구', '01011111111', '주소');
-
-select * from blogger201912012;
