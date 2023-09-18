@@ -1,4 +1,4 @@
-package iducs.javaweb.blog201912012.model;
+package iducs.javaweb.blog.model;
 
 public class Member {
     private long id; // Member field : 객체의 속성

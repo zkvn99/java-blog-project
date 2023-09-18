@@ -1,6 +1,6 @@
-package iducs.javaweb.blog201912012.repository;
+package iducs.javaweb.blog.repository;
 
-import iducs.javaweb.blog201912012.model.Member;
+import iducs.javaweb.blog.model.Member;
 
 import java.sql.*;
 import java.util.ArrayList;

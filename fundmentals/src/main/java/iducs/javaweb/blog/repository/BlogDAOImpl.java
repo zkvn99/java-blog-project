@@ -1,7 +1,6 @@
-package iducs.javaweb.blog201912012.repository;
+package iducs.javaweb.blog.repository;
 
-import iducs.javaweb.blog201912012.model.Blog;
-import iducs.javaweb.blog201912012.model.Member;
+import iducs.javaweb.blog.model.Blog;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -20,7 +19,7 @@ public class BlogDAOImpl extends OracleDAOImpl implements BlogDAO{
 
     @Override
     public int create(Blog blog) {
-        String query = "insert into blog201912012 values(seq_blog201912012.nextval, ?, ?, ?, ?)";
+        String query = "insert into blog values(seq_blog.nextval, ?, ?, ?, ?)";
         int rows = 0; // 질의 처리 결과 영향받은 행의 수
         try{
             conn = getConnection();
@@ -39,7 +38,7 @@ public class BlogDAOImpl extends OracleDAOImpl implements BlogDAO{
     @Override
     public Blog read(Blog blog) {
         Blog ret = null;
-        String sql = "select * from BLOG201912012 where id='" + blog.getId() + "'";
+        String sql = "select * from BLOG where id='" + blog.getId() + "'";
         try {
             conn = getConnection(); // DB 연결 객체 생성
             stmt = conn.createStatement();
@@ -65,7 +64,7 @@ public class BlogDAOImpl extends OracleDAOImpl implements BlogDAO{
     public List<Blog> readList() {
         List<Blog> blogList = null;
         Blog ret = null;
-        String sql = "select * from blog201912012";
+        String sql = "select * from blog";
         try {
             conn = getConnection(); // DB 연결 객체 생성
             stmt = conn.createStatement();
@@ -91,7 +90,7 @@ public class BlogDAOImpl extends OracleDAOImpl implements BlogDAO{
     @Override
     public int update(Blog blog) {
         int ret = 0;
-        String sql = "update blog201912012 set name=?, email=?, title=?, content=? where id='" + blog.getId() + "'";
+        String sql = "update blog set name=?, email=?, title=?, content=? where id='" + blog.getId() + "'";
         // placeholder : 자리 대체 기호
         try {
             conn = getConnection(); // DB 연결 객체 생성
@@ -116,7 +115,7 @@ public class BlogDAOImpl extends OracleDAOImpl implements BlogDAO{
     @Override
     public int delete(Blog blog) {
         int rows = 0;
-        String sql = "delete from blog201912012 where id=?";
+        String sql = "delete from blog where id=?";
         try {
             pstmt = conn.prepareStatement(sql);
             pstmt.setLong(1, blog.getId());

@@ -1,3 +1,5 @@
+create sequence seq_member increment by 1 start with 1;
+
 create table member (
                         id      number(11) not null primary key,
                         email   varchar2(30) not null unique,

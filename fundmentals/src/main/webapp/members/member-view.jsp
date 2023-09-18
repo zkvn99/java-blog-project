@@ -1,4 +1,4 @@
-<%@ page import="iducs.javaweb.blog201912012.model.MemberDTO" %>
+<%@ page import="iducs.javaweb.blog.model.MemberDTO" %>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <html>
 <head>

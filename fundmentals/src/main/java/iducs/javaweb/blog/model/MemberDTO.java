@@ -1,4 +1,4 @@
-package iducs.javaweb.blog201912012.model;
+package iducs.javaweb.blog.model;
 
 // 1. model 패키지를 추가
 // 2. MemberDTO 클래스 정의

@@ -1,4 +1,4 @@
-package iducs.javaweb.blog201912012;
+package iducs.javaweb.blog;
 
 import java.io.*;
 import javax.servlet.http.*;

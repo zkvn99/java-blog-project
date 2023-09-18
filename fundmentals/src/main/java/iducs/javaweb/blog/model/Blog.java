@@ -1,4 +1,4 @@
-package iducs.javaweb.blog201912012.model;
+package iducs.javaweb.blog.model;
 
 import lombok.*;
 

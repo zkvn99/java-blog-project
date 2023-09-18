@@ -1,9 +1,8 @@
-package iducs.javaweb.blog201912012.controller;
+package iducs.javaweb.blog.controller;
 
-import iducs.javaweb.blog201912012.model.Blog;
-import iducs.javaweb.blog201912012.model.Member;
-import iducs.javaweb.blog201912012.repository.BlogDAO;
-import iducs.javaweb.blog201912012.repository.BlogDAOImpl;
+import iducs.javaweb.blog.model.Blog;
+import iducs.javaweb.blog.model.Member;
+import iducs.javaweb.blog.repository.BlogDAOImpl;
 
 
 import javax.servlet.ServletException;

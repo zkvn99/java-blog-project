@@ -1,4 +1,4 @@
-package iducs.javaweb.blog201912012.service;
+package iducs.javaweb.blog.service;
 
 public class MemberServiceImpl implements MemberService {
 

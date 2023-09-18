@@ -1,7 +1,7 @@
-package iducs.javaweb.blog201912012.repository;
+package iducs.javaweb.blog.repository;
 
 import java.util.List;
-import iducs.javaweb.blog201912012.model.Blog;
+import iducs.javaweb.blog.model.Blog;
 
 public interface BlogDAO {
     int create(Blog blog);
