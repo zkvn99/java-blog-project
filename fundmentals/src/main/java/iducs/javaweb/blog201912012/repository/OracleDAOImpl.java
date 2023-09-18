@@ -8,7 +8,8 @@ public class OracleDAOImpl implements DAO {
         Connection conn = null;
         String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:XE";
         String dbUser = "system";
-        String dbPass = "oracle";
+        String dbPass = "435125";
+
         try {
             Class.forName("oracle.jdbc.OracleDriver");
             conn = DriverManager.getConnection(jdbcUrl, dbUser, dbPass);
